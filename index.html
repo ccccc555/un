@@ -20,12 +20,12 @@
     
     ct1.font='28px Arial'
 img.onload = function() {
-  c1.width = this.naturalWidth; 
-  c1.height = this.naturalHeight;
-  ct1.drawImage(this, 0, 0);
+ // c1.width = this.naturalWidth; 
+//  c1.height = this.naturalHeight;
+  ct1.drawImage(img, 0, 0);
 };
 
- function un(){
+ function un1(){
 
 const key='q_8d-Ai3RM0MhgUUZ7Q3f5wH2yILVXBozGVVOeetlgk'
 
@@ -44,8 +44,9 @@ alert('Image generated')
 
 function start(){
 promp=prompt('EnterPrompt')
-un()
+un1()
 }
+pr=prompt('begin')
 setTimeout(start,800)
 
 </script>
