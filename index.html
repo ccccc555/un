@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <body>   
+    ">
+  </script>
+
+
+    var promp=""
+    var c1 = document.getElementById("Canvas1")
+    var ct1 = c1.getContext("2d")
+    
+    var img =new Image()
+    
+    var screenw=window.innerWidth, screenh=window.innerHeight
+    var size=Math.floor(.2*screenw)
+    
+    c1.width=size; c1.height=size
+    
+    ct1.font='28px Arial'
+img.onload = function() {
+  c1.width = this.naturalWidth; 
+  c1.height = this.naturalHeight;
+  ct1.drawImage(this, 0, 0);
+};
+
+ function un(){
+
+const key='q_8d-Ai3RM0MhgUUZ7Q3f5wH2yILVXBozGVVOeetlgk'
+
+ fetch(
+  https://api.unsplash.com/photos/random?client_id=${key}
+)
+.then(response => response.json())
+.then( data=> {
+  img.src = data.urls.regular
+alert('Image generated')
+}
+      )
+.catch(error => alert('err='+error));
+
+}
+
+function start(){
+promp=prompt('EnterPrompt')
+un()
+}
+setTimeout(start,800)
+
+</script>
+  </body>
+</html>
